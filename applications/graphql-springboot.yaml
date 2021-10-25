@@ -3,6 +3,8 @@ kind: Application
 metadata:
   name: graphql-springboot
   namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-options: Prune=true
 spec:
   project: default
   source:
@@ -13,6 +15,9 @@ spec:
     server: https://kubernetes.default.svc
     namespace: graphql-springboot
   syncPolicy:
+    syncOptions:
+      - PrunePropagationPolicy=foreground
+      - CreateNamespace=true
     automated:
       prune: true
       selfHeal: true
