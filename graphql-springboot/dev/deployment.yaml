@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: graphql-springboot
-        image: graphql-springboot:20
+        image: diegogomesaraujo/graphql-springboot:20
         resources:
           limits:
             memory: "1Gi"
