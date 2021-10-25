@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: graphql-springboot
+  labels:
+    app: graphql-springboot
+spec:
+  selector:
+    matchLabels:
+      app: graphql-springboot
+  template:
+    metadata:
+      labels:
+        app: graphql-springboot
+    spec:
+      containers:
+      - name: graphql-springboot
+        image: graphql-springboot:20
+        resources:
+          limits:
+            memory: "1Gi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8080
