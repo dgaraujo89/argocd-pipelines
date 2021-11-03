@@ -27,3 +27,8 @@ spec:
               secretKeyRef:
                 name: nginx
                 key: password
+          - name: APP_NAME
+            valueFrom:
+              secretKeyRef:
+                name: nginx
+                key: appName
