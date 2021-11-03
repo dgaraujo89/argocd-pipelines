@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: nginx
 spec:
-  replicas: 4
+  replicas: 2
   revisionHistoryLimit: 3
   selector:
     matchLabels:
@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:latest
+        image: nginx:stable
         resources:
           limits:
             memory: "128Mi"
