@@ -12,10 +12,10 @@ spec:
       labels:
         app: nginx
     spec:
+      revisionHistoryLimit: 3
       containers:
       - name: nginx
         image: nginx:stable
-        revisionHistoryLimit: 3
         resources:
           limits:
             memory: "128Mi"
