@@ -22,8 +22,8 @@ spec:
         ports:
         - containerPort: 80
         env:
-          - name: APP_NAME
+          - name: PASSWORD
             valueFrom:
               secretKeyRef:
-                name: test
-                key: app
+                name: nginx
+                key: password
